@@ -16,7 +16,7 @@ function Mostrar(){
         <div className="crud">
          {
            info.map((ele)=>(
-            <div className="card" key={ele.id}>
+            <div className="card" key={ele._id}>
               <div className="card-content">
                  <h2 className="card-title">{ele.tittle}</h2>
                  <p className="card-description">
