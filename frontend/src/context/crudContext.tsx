@@ -10,7 +10,7 @@ interface ThemeContextType {
   info: User[];
   eliminarTarea:(id)=>void;
   editarTarea:(id,data)=>void;
-  traerUna:(id)=>Promise<User>,
+  traerUna:(_id)=>Promise<User>,
 }
 
 type User = {
@@ -78,8 +78,8 @@ const editarTarea = async(id,data)=>{
 
 /*traer una tarea*/
 
-const traerUna = async(id):Promise<User>=>{
-  const res = await traerUnoCrud(id)
+const traerUna = async(_id):Promise<User>=>{
+  const res = await traerUnoCrud(_id)
   return res.data
 }
 
