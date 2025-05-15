@@ -17,7 +17,7 @@ type User = {
   tittle:string;
   description:string;
   date:number;
-  _id:string|number
+  _id:string|number;
 };
 
 
