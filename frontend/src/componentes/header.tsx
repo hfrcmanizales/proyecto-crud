@@ -41,7 +41,7 @@ const Header: React.FC = () => {
          
           <Link to="/">register</Link>
           <Link to="/login">login</Link>
-          <Link onClick={()=>remove()}>cerrar seccion</Link>
+          <p onClick={()=>remove()}>cerrar seccion</p>
         
       </div>
     </>
