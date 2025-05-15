@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           </>
            )}
           
-          <Link onClick={()=>remove()}>cerrar seccion</Link>
+          <p onClick={()=>remove()}>cerrar seccion</p>
         </nav>
         <div className="menu-btn" onClick={toggleSidebar}>
           ☰
