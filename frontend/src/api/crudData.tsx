@@ -1,14 +1,13 @@
 import axios from "./instancia";
 
-const API_URL = import.meta.env.VITE_BACKEND;
 
 
-export const enviaCrud = (data) => axios.post(`${API_URL}/crud`, data);
+export const enviaCrud = (data) => axios.post(`/crud`, data);
 
-export const traeCrud = () => axios.get(`${API_URL}/crud`);
+export const traeCrud = () => axios.get(`/crud`);
 
-export const eliminarCrud = (id) => axios.delete(`${API_URL}/crud/${id}`);
+export const eliminarCrud = (id) => axios.delete(`/crud/${id}`);
 
-export const editarCrud = (id, data) => axios.put(`${API_URL}/crud/${id}`, data);
+export const editarCrud = (id, data) => axios.put(`/crud/${id}`, data);
 
-export const traerUnoCrud = (id) => axios.get(`${API_URL}/crud/${id}`);
+export const traerUnoCrud = (id) => axios.get(`/crud/${id}`);
