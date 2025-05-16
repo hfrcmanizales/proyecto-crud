@@ -55,6 +55,7 @@ const [loading,setLoading]=useState(true)
    try{
       const res = await loginData(data)
       setAutentication(true)
+      console.log(res)
      
      
 
