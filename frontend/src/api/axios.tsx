@@ -1,9 +1,8 @@
 import axios from "./instancia";
-const API_URL = import.meta.env.VITE_BACKEND;
 
 
-export const enviaData = (data) => axios.post(`${API_URL}/register`, data);
+export const enviaData = (data) => axios.post(`/register`, data);
 
-export const loginData = (data) => axios.post(`${API_URL}/login`, data);
+export const loginData = (data) => axios.post(`/login`, data);
 
-export const verifityData = () => axios.get(`${API_URL}/verifity`);
+export const verifityData = () => axios.get(`/verifity`);
