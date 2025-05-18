@@ -10,7 +10,7 @@ function ProtegerRutas(){
     	return <h2>Loading...</h2>
 
     }
-   if(!autentication&&!loading)return <Navigate to="https://proyecto-crud-1.onrender.com/login" replace/>
+   if(!autentication&&!loading)return <Navigate to="/login" replace/>
 	return(
 		<>
 		<Outlet/>
