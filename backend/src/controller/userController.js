@@ -15,7 +15,11 @@ export const Login = async(req,res)=>{
     if(!clave) return res.status(400).json({Message:"clave no coincide"})
     
     const token = await createToken({id:buscaUsuario._id})
-    res.cookie("token",token)
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,           // 👈 OBLIGATORIO en producción HTTPS
+  sameSite: "None",       // 👈 PERMITE que frontend y backend estén en dominios distintos
+});
 
    res.json(buscaUsuario)
 
@@ -48,7 +52,11 @@ export const Register = async(req,res)=>{
 
     const response = await nuevoUser.save()
     const token = await createToken({id:response._id})
-    res.cookie("token",token)
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,           // 👈 OBLIGATORIO en producción HTTPS
+  sameSite: "None",       // 👈 PERMITE que frontend y backend estén en dominios distintos
+});
     res.json({
     	name,
     	email,
