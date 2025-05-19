@@ -47,6 +47,7 @@ function Formulario(){
        editarTarea(params.id,data)
      }else{
       crearData(data)
+      console.log(data)
      }
     
     navigate("/mostrar")
