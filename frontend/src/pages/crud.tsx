@@ -18,8 +18,8 @@ function Formulario(){
 
   useEffect(()=>{
      async function trae(){
-       if(params.id){
-         const res =await traerUna(params.id)
+       if(params._id){
+         const res =await traerUna(params._id)
          setValue("tittle",res.tittle);
          setValue("description",res.description);
        }
@@ -43,8 +43,8 @@ function Formulario(){
   } = useForm<FormData>();
 
  const onSubmit = (data: FormData) => {
-     if(params.id){
-       editarTarea(params.id,data)
+     if(params._id){
+       editarTarea(params._id,data)
      }else{
       crearData(data)
       console.log(data)

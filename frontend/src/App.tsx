@@ -25,7 +25,7 @@ function App() {
          
          <Route element={<ProtegerRutas/>}>
             <Route path="/formulario" element={<Formulario/>}/>
-            <Route path="/formulario/:id" element={<Formulario/>}/>
+            <Route path="/formulario/:_id" element={<Formulario/>}/>
             <Route path="/mostrar" element={< Mostrar/>}/>
          </Route>
          

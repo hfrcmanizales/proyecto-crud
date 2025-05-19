@@ -8,8 +8,8 @@ interface ThemeContextType {
   crearData: (data) => void;
   obtenerTarea:()=>void;
   info: User[];
-  eliminarTarea:(id)=>void;
-  editarTarea:(id,data)=>void;
+  eliminarTarea:(_id)=>void;
+  editarTarea:(_id,data)=>void;
   traerUna:(_id)=>Promise<User>,
 }
 
@@ -59,16 +59,16 @@ function ProviderCrud({children}:ProviderUserProps){
 
 /*borrar tarea*/
    
-   const eliminarTarea = async(id:string|number)=>{
-     const res = await eliminarCrud(id)
-     setInfo(info.filter((ele)=>ele._id!==id))
+   const eliminarTarea = async(_id:string|number)=>{
+     const res = await eliminarCrud(_id)
+     setInfo(info.filter((ele)=>ele._id!==_id))
    }
 
 /*ediatar tareas*/
 
-const editarTarea = async(id,data)=>{
+const editarTarea = async(_id,data)=>{
     try{
-     const res = await editarCrud(id,data)
+     const res = await editarCrud(_id,data)
      console.log(res)
     }catch(error){
       console.log(error)
