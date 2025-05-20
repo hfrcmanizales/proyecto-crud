@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           </>
            )}
           
-          <p onClick={()=>remove()}>cerrar seccion</p>
+          <button className="logout-btn" onClick={()=>remove()}>cerrar seccion</button>
         </nav>
         <div className="menu-btn" onClick={toggleSidebar}>
           ☰
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
          
           <Link to="/">register</Link>
           <Link to="/login">login</Link>
-          <p onClick={()=>remove()}>cerrar seccion</p>
+          <button className="logout-btn" onClick={()=>remove()}>cerrar seccion</button>
         
       </div>
     </>

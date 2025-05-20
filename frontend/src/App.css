@@ -251,3 +251,26 @@ button:hover {
   justify-content: center;
   margin-top: 50px;
 }
+
+/*cerrar seccion*/
+
+.logout-btn {
+      background-color: #ffffff;
+      color: #333;
+      border: 2px solid #ddd;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logout-btn:hover {
+      background-color: #f8f8f8;
+      border-color: #bbb;
+      color: #000;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
