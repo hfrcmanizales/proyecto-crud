@@ -26,7 +26,7 @@ function Formulario(){
 
      }
      trae()
-  },[])
+  },[params._id])
 
 
 
