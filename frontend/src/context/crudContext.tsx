@@ -10,7 +10,9 @@ interface ThemeContextType {
   info: User[];
   eliminarTarea:(_id)=>void;
   editarTarea:(_id,data)=>void;
-  traerUna:(_id)=>Promise<User>,
+  traerUna:(_id)=>Promise<User>;
+  reload:boolean;
+  setReload: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 type User = {
@@ -41,7 +43,7 @@ interface ProviderUserProps {
 function ProviderCrud({children}:ProviderUserProps){
 
   const [info,setInfo]=useState<User[]>([])
-
+  const [reload,setReload]=useState(false)
 
 //crear tarea//
   const crearData = async(data)=>{
@@ -92,7 +94,9 @@ const traerUna = async(_id):Promise<User>=>{
 			 info,
        eliminarTarea,
        editarTarea,
-       traerUna
+       traerUna,
+       reload,
+       setReload
 
 		}}>
 		{children}

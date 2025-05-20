@@ -32,7 +32,7 @@ function Formulario(){
 
 
 
-   const {crearData,traerUna,editarTarea} = crudUser()
+   const {crearData,reload,traerUna,setReload,editarTarea} = crudUser()
    const navigate = useNavigate()
   const {
     register,
@@ -51,6 +51,7 @@ function Formulario(){
      }
     
     navigate("/mostrar")
+    setReload(!reload)
   };
 
 

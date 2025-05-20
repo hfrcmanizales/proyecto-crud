@@ -5,11 +5,14 @@ import {Link} from "react-router-dom"
 
 function Mostrar(){
 
-  const {obtenerTarea,info,eliminarTarea}=crudUser()
+  const {obtenerTarea,reload,info,eliminarTarea}=crudUser()
+
+
+
 
   useEffect(()=>{
      obtenerTarea()
-  },[obtenerTarea])
+  },[reload])
 
 
 	return(
