@@ -17,13 +17,15 @@ function Formulario(){
   const params = useParams()
 
   useEffect(()=>{
+    if(params._id){
      async function trae(){
-       if(params._id){
+       
          const res =await traerUna(params._id)
          setValue("tittle",res.tittle);
          setValue("description",res.description);
-       }
+       
 
+     }
      }
      trae()
   },[params._id])
