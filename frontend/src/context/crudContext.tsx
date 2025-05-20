@@ -72,6 +72,7 @@ const editarTarea = async(_id,data)=>{
     try{
      const res = await editarCrud(_id,data)
      console.log(res)
+     setReload(!reload)
     }catch(error){
       console.log(error)
     }
