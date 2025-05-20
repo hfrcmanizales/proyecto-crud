@@ -9,7 +9,7 @@ function Mostrar(){
 
   useEffect(()=>{
      obtenerTarea()
-  },[info])
+  },[])
 
 
 	return(
