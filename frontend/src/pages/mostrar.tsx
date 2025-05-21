@@ -47,9 +47,9 @@ function Mostrar(){
          }
         </div>
 
-      
+      </>
 		)
-  </>
+
 }
 
 export default Mostrar;
