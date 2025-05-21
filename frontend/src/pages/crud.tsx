@@ -48,9 +48,10 @@ function Formulario(){
  const onSubmit = (data: FormData) => {
      if(params._id){
        editarTarea(params._id,data)
+       console.log("editando")
      }else{
       crearData(data)
-      console.log(data)
+      console.log("creando")
      }
     
     navigate("/mostrar")
