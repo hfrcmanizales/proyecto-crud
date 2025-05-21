@@ -16,6 +16,7 @@ function Mostrar(){
 
 
 	return(
+   
         <div className="crud">
          {
            info.map((ele)=>(
@@ -40,6 +41,8 @@ function Mostrar(){
              ))
          }
         </div>
+
+      
 		)
 }
 
