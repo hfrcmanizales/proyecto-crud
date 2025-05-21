@@ -48,10 +48,10 @@ function Formulario(){
  const onSubmit = async(data: FormData) => {
      if(params._id){
        await editarTarea(params._id,data)
-       console.log("editando")
+       
      }else{
       await crearData(data)
-      console.log("creando")
+     
      }
      setReload(!reload)
     navigate("/mostrar")
