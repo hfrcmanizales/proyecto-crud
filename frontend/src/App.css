@@ -274,3 +274,27 @@ button:hover {
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       transform: translateY(-2px);
     }
+
+
+/*agrega tareas h2*/
+
+.agregar-tareas {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #4caf50;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.agregar-tareas:hover {
+  background-color: #45a049;
+}
+
+.agregar-tareas:active {
+  transform: scale(0.98);
+}

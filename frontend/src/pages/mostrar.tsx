@@ -2,12 +2,13 @@ import React,{useEffect,useState} from "react"
 import "../App.css"
 import {crudUser} from "../context/crudContext"
 import {Link} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
 
 function Mostrar(){
 
   const {obtenerTarea,reload,info,eliminarTarea}=crudUser()
 
-
+ const navigate = useNavigate()
 
 
   useEffect(()=>{
@@ -18,6 +19,9 @@ function Mostrar(){
 	return(
    
         <div className="crud">
+        <h2 className="agregar-tareas" onClick={() => navigate("/formulario")}>
+         Agregar tareas
+        </h2>
          {
            info.map((ele)=>(
             <div className="card" key={ele._id}>
