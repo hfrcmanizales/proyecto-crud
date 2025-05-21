@@ -45,17 +45,17 @@ function Formulario(){
     setValue
   } = useForm<FormData>();
 
- const onSubmit = (data: FormData) => {
+ const onSubmit = async(data: FormData) => {
      if(params._id){
-       editarTarea(params._id,data)
+       await editarTarea(params._id,data)
        console.log("editando")
      }else{
-      crearData(data)
+      await crearData(data)
       console.log("creando")
      }
-    
+     setReload(!reload)
     navigate("/mostrar")
-    setReload(!reload)
+   
   };
 
 
