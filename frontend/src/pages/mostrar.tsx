@@ -17,11 +17,12 @@ function Mostrar(){
 
 
 	return(
-   
-        <div className="crud">
-        <h2 className="agregar-tareas" onClick={() => navigate("/formulario")}>
+    <>
+       <h2 className="agregar-tareas" onClick={() => navigate("/formulario")}>
          Agregar tareas
         </h2>
+        <div className="crud">
+        
          {
            info.map((ele)=>(
             <div className="card" key={ele._id}>
@@ -48,6 +49,7 @@ function Mostrar(){
 
       
 		)
+  </>
 }
 
 export default Mostrar;
