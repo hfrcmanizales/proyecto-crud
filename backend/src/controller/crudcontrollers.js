@@ -47,7 +47,7 @@ export const putCrud = async(req,res)=>{
        	new:true
        });
        if(!actualizar)return res.status(400).json({message:"tarea no se actualizo"})
-       res.send("actualizado")
+       res.send(actualizar)
 	}catch(error){
 		console.log(error)
 	}
